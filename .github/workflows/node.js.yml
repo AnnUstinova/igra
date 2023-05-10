@@ -10,24 +10,24 @@ pull_request:
 # jobs запускаются параллельно, если не указана последовательность
 jobs:
   # Название job вы можете назвать как угодно
-my_build_job:
+  my_build_job:
   # Операционная система в виртуальной машине, в которой запускаются процессы
   runs-on: ubuntu-latest
   steps:
-    # Actions от github: проверяет репозиторий, гит и т.д.
-    - uses: actions/checkout@v3
+  # Actions от github: проверяет репозиторий, гит и т.д.
+  - uses: actions/checkout@v3
 
-    # Устанавливаем все необходимые зависимости и запускаем тесты node
-    - name: npm install, test and build
+# Устанавливаем все необходимые зависимости и запускаем тесты node
+- name: npm install, test and build
       run: |
           npm install
           npm run build
-      # Пример однолинейного простого скрипта shell
+  # Пример однолинейного простого скрипта shell
       - name: Run a one-line skript
         run: echo hello,world!
       
       # Пример многолинейного скрипта shell
-        - name: Run a multi-line script
+         - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
