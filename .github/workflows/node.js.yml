@@ -33,5 +33,5 @@ my_build_job:
           echo test, and deploy your project.
           
       - name: Run JS file for test
-        run: node.js.yml/script.js
+        run: nodejs/script.js
         
