@@ -32,6 +32,6 @@ my_build_job:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Run JS file for test
+       - name: Run JS file for test
         run: nodejs/script.js
         
